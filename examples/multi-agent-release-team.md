@@ -62,12 +62,12 @@ are needed because the coordinator can still cherry-pick findings.
 
 ```mermaid
 flowchart TB
-    owner["Human owner<br/>Sets mission and boundaries"] --> kernel["Shared mission kernel"]
+    owner["Human owner<br/> Sets mission and boundaries"] --> kernel["Shared mission kernel"]
 
     subgraph roles["Three specialized roles"]
-        dana["Dana<br/>Coordinate and integrate"]
-        ruth["Ruth<br/>Challenge claims"]
-        elena["Elena<br/>Protect privacy and boundaries"]
+        dana["Dana<br/> Coordinate and integrate"]
+        ruth["Ruth<br/> Challenge claims"]
+        elena["Elena<br/> Protect privacy and boundaries"]
     end
 
     kernel --> dana

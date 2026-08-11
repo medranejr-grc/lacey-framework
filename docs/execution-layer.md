@@ -65,7 +65,7 @@ flowchart TB
         constitution["Constitution"] --> integrity["Mission-integrity review"]
         integrity --> approval["Human approval"]
         approval --> manifest["Signed manifest"]
-        approval --> policy["Approved policy bundle<br/>Referenced by manifest"]
+        approval --> policy["Approved policy bundle<br/> Referenced by manifest"]
         manifest --> publish["Publish or renew approved artifacts"]
         policy --> publish
         manifest --> revoke["Revocation or suspension"]
@@ -73,18 +73,18 @@ flowchart TB
 
     subgraph execution["Execution plane (proposed)"]
         workload["Workload verification"] --> session["Session identity"]
-        session --> gateway["Policy gateway<br/>Brokered-access profile"]
+        session --> gateway["Policy gateway<br/> Brokered-access profile"]
         gateway --> tool["Protected tool or resource"]
         revoke -.->|"deny launch or terminate authority"| stopped["Authority denied or terminated"]
     end
 
     subgraph evidence["Evidence plane (proposed)"]
         decision["Authorization decision record"] --> correlated["Correlated evidence set"]
-        executionevent["Execution event<br/>Only if an action occurs"] --> correlated
+        executionevent["Execution event<br/> Only if an action occurs"] --> correlated
         correlated --> store["Integrity-protected evidence store"]
         store --> reconcile["Reconciliation"]
         reconcile --> outcome["Human outcome review"]
-        outcome --> feedback["Human-directed feedback<br/>to the next control cycle"]
+        outcome --> feedback["Human-directed feedback<br/> to the next control cycle"]
     end
 
     publish -->|"active manifest and approved policy references"| workload

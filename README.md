@@ -93,16 +93,16 @@ scrutiny, implementation, and repair, but it has not been built or validated.
 
 ```mermaid
 flowchart TB
-    subzero["Sub zero: provider platform substrate<br/>System hierarchy, model behavior, vendor policy<br/>Provider-controlled ceiling"]
+    subzero["Sub zero: provider platform substrate<br/> System hierarchy, model behavior, vendor policy<br/> Provider-controlled ceiling"]
     subgraph layerzero["Layer zero: identity and authorization"]
-        constitution["Constitutional identity<br/>Mission, beneficiaries, betrayals, human authority<br/>Text artifacts deployed; behavior unmeasured"]
-        manifest["Approved signed identity<br/>Manifest, authorization scope, provenance<br/>Proposed; unbuilt"]
+        constitution["Constitutional identity<br/> Mission, beneficiaries, betrayals, human authority<br/> Text artifacts deployed; behavior unmeasured"]
+        manifest["Approved signed identity<br/> Manifest, authorization scope, provenance<br/> Proposed; unbuilt"]
         constitution -->|"mission and governance reference"| manifest
     end
-    runtime["Layer one: session authorization and mediated action<br/>Credentials, policy decisions, tools<br/>Proposed; unbuilt"]
-    evidence["Layer two: evidence and outcomes<br/>Observed actions, audit evidence, human outcomes<br/>Proposed; unbuilt"]
-    judgment["Human judgment<br/>Review, repair, reapproval, revocation"]
-    response["Next governance decision<br/>Revise mission, change scope, revoke, or make no change"]
+    runtime["Layer one: session authorization and mediated action<br/> Credentials, policy decisions, tools<br/> Proposed; unbuilt"]
+    evidence["Layer two: evidence and outcomes<br/> Observed actions, audit evidence, human outcomes<br/> Proposed; unbuilt"]
+    judgment["Human judgment<br/> Review, repair, reapproval, revocation"]
+    response["Next governance decision<br/> Revise mission, change scope, revoke, or make no change"]
 
     subzero -.->|"platform ceiling; not the source of mission"| constitution
     manifest -->|"approved identity and scope"| runtime
