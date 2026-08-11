@@ -1,0 +1,17 @@
+The contents of this directory are dedicated to the public domain under
+Creative Commons CC0 1.0 Universal.
+
+To the extent possible under law, the author has waived all copyright and
+related or neighboring rights to this material. You may copy, modify, and
+distribute it, including for commercial purposes, without asking permission
+and without providing attribution.
+
+This material is meant to be pasted into production agent configurations
+and modified freely. No condition here attaches to the systems you build
+with it.
+
+Full legal code:
+  https://creativecommons.org/publicdomain/zero/1.0/legalcode
+
+Note: docs/ in this repository is licensed CC BY-SA 4.0 instead. See
+LICENSE.md at the repository root for why the split exists.

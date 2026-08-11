@@ -1,0 +1,43 @@
+name: Challenge a claim
+description: Identify a claim that is unsupported, overstated, or missing a material counterexample.
+title: "[Claim]: "
+body:
+  - type: markdown
+    attributes:
+      value: Thanks for pressure-testing the framework. Specific counterevidence is especially useful.
+  - type: input
+    id: location
+    attributes:
+      label: Claim location
+      description: Link the file and heading or quote the shortest text needed to identify it.
+      placeholder: docs/example.md, under "Section name"
+    validations:
+      required: true
+  - type: textarea
+    id: challenge
+    attributes:
+      label: What is wrong or incomplete?
+      description: Explain the strongest version of the challenge.
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence or counterexample
+      description: Link primary sources or describe direct observations and their limits.
+    validations:
+      required: true
+  - type: textarea
+    id: repair
+    attributes:
+      label: Proposed repair
+      description: Suggest narrower language, a missing caveat, a test, or removal.
+    validations:
+      required: false
+  - type: checkboxes
+    id: privacy
+    attributes:
+      label: Publication check
+      options:
+        - label: I removed credentials, personal data, and non-public employer, client, or third-party information.
+          required: true

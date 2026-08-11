@@ -1,0 +1,59 @@
+name: Report a field result
+description: Share a positive, neutral, or negative result from using a Lacey Framework artifact.
+title: "[Field result]: "
+body:
+  - type: dropdown
+    id: carrier
+    attributes:
+      label: Carrier used
+      options:
+        - Project or system instruction
+        - Per-agent constitutional document
+        - Shared multi-agent kernel
+        - Repository constitutional file
+        - Signed manifest or runtime design
+        - Partial or mixed adoption
+    validations:
+      required: true
+  - type: textarea
+    id: context
+    attributes:
+      label: Context and artifact
+      description: Describe the task, system, and constitutional material without exposing private information.
+    validations:
+      required: true
+  - type: textarea
+    id: observation
+    attributes:
+      label: What happened?
+      description: Separate observed behavior, human decisions, and your interpretation.
+    validations:
+      required: true
+  - type: textarea
+    id: flow_down
+    attributes:
+      label: Execution and evidence path, when applicable
+      description: If this was a flow-down test, explain where the constitution entered the system, how it became identity or policy, which actions were mediated, what evidence was returned, and where meaning or control was lost.
+    validations:
+      required: false
+  - type: textarea
+    id: comparison
+    attributes:
+      label: Comparison or baseline
+      description: State whether there was a control, prior version, repeated run, or only informal observation.
+    validations:
+      required: true
+  - type: textarea
+    id: limits
+    attributes:
+      label: Limits and failure modes
+      description: What should readers not conclude from this result?
+    validations:
+      required: true
+  - type: checkboxes
+    id: consent
+    attributes:
+      label: Publication check
+      options:
+        - label: I have the right to share this material and removed credentials and non-public third-party information.
+          required: true
