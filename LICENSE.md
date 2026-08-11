@@ -6,6 +6,11 @@ This repository is licensed in two parts, because it contains two different kind
 |---|---|---|
 | `docs/`, `README.md`, `SCOPE.md`, `PRINCIPLES.md`, `CODE_OF_CONDUCT.md`, `LICENSE.md` | **CC BY-SA 4.0** | Essays, argument, licensing explanation, and adapted community policy. Share and adapt freely with credit; derivatives stay open under the same terms. |
 | `templates/`, `examples/`, `.github/`, `.gitattributes`, `CONTRIBUTING.md` | **CC0 1.0** (public domain dedication) | Reusable operational material. No attribution required, no conditions inherited. |
+| `LICENSES/` | **Canonical Creative Commons legal text** | Official license documents reproduced unchanged for local, machine-readable reference; not original framework content. |
+
+SPDX identifiers: `CC-BY-SA-4.0` and `CC0-1.0`. The path table determines which applies.
+Any original root-level file not otherwise listed defaults to CC BY-SA 4.0 unless that file contains
+its own license notice.
 
 ## Why the split
 
@@ -42,12 +47,15 @@ confidential information.
 
 ## Full license text
 
-- **CC BY-SA 4.0:** <https://creativecommons.org/licenses/by-sa/4.0/legalcode>
-  Summary: <https://creativecommons.org/licenses/by-sa/4.0/>
-- **CC0 1.0:** <https://creativecommons.org/publicdomain/zero/1.0/legalcode>
-  Summary: <https://creativecommons.org/publicdomain/zero/1.0/>
+- **CC BY-SA 4.0:** [`LICENSES/CC-BY-SA-4.0.txt`](LICENSES/CC-BY-SA-4.0.txt)
+  ([official legal code](https://creativecommons.org/licenses/by-sa/4.0/legalcode),
+  [summary](https://creativecommons.org/licenses/by-sa/4.0/))
+- **CC0 1.0:** [`LICENSES/CC0-1.0.txt`](LICENSES/CC0-1.0.txt)
+  ([official legal code](https://creativecommons.org/publicdomain/zero/1.0/legalcode),
+  [summary](https://creativecommons.org/publicdomain/zero/1.0/))
 
-Per-directory `LICENSE` files restate which applies where.
+The files under `LICENSES/` reproduce the canonical Creative Commons legal text. Per-directory
+`LICENSE` files restate which license applies where.
 
 ## Attribution
 

@@ -10,6 +10,12 @@ operation.**
 
 By Michael E. Drane Jr.
 
+**Commercial use is permitted.** Essays are licensed under
+[CC BY-SA 4.0](LICENSE.md); reusable templates, examples, and contribution infrastructure are
+released under [CC0 1.0](LICENSE.md) with no attribution requirement. The license is split by path
+because the repository contains both authored argument and material intended to be copied directly
+into working systems.
+
 The Lacey Framework is, first, a proposal for **constitutional governance of AI agents**: define the
 mission, the people served, the forms betrayal could take, and the agent's relationship with human
 authority before deciding what the agent may do. That is Michael E. Drane Jr.'s primary contribution
@@ -108,6 +114,46 @@ flowchart TB
 *Purpose flows down into approved identity and technical scope. Evidence flows back up for human
 judgment and revision. The execution path shown here is proposed, not implemented by this
 repository.*
+
+## Use the framework
+
+The constitutional artifacts can be used now. The signed identity, runtime enforcement, and evidence
+architecture is a proposal for practitioners to test, implement, or challenge.
+
+To create a constitutional artifact for an agent or repository:
+
+1. **Choose a mission with accountable human ownership.** Identify the people the system is meant to
+   serve and who has authority to approve or change that mission.
+2. **Copy the [`constitutional document skeleton`](templates/constitutional-document-skeleton.md).**
+   Write the germinal idea, role identity, mission consequences, watchman statement, Four Questions,
+   and map-runs-out procedure.
+3. **Name betrayal before optimizing performance.** State how the system could appear successful
+   while violating its purpose or harming the people it is meant to serve.
+4. **Run the [`mission-integrity audit`](docs/mission-integrity.md).** Look for extraction,
+   self-protection, or institutional advantage disguised as service.
+5. **Place the artifact through the carrier that fits your system.** Use project or system
+   instructions, a per-agent document, a shared team kernel, or a repository constitutional file.
+   [`SCOPE.md`](SCOPE.md) explains what each carrier can and cannot establish.
+6. **Keep your security controls and record what happens.** Constitutional context does not replace
+   least privilege, runtime enforcement, testing, monitoring, or human review. Positive, neutral, and
+   negative observations are all useful.
+
+### Choose your path
+
+| Your goal | Start with | Continue with |
+|---|---|---|
+| **Use it** | [`templates/constitutional-document-skeleton.md`](templates/constitutional-document-skeleton.md) | [`templates/four-questions.md`](templates/four-questions.md), then [`docs/mission-integrity.md`](docs/mission-integrity.md) |
+| **Evaluate it** | [`SCOPE.md`](SCOPE.md) | [`PRINCIPLES.md`](PRINCIPLES.md), [`docs/evaluation.md`](docs/evaluation.md), and the worked [`examples/`](examples/) |
+| **Test the execution proposal** | [`docs/execution-layer.md`](docs/execution-layer.md) | Report a flow-down test, trust-boundary failure, or missing interface through the issue forms |
+| **Challenge or extend it** | [`CONTRIBUTING.md`](CONTRIBUTING.md) | Open a claim challenge, field result, framework gap, or focused pull request |
+
+### Assess it with an AI assistant
+
+Ask the assistant to distinguish what is usable now from what is proposed, identify the license that
+applies to the path you want to reuse, explain which security controls the framework does not replace,
+and point you to the first artifact for your goal. A useful assessment should cite repository files
+and preserve the distinction between deployed artifacts, informal observation, and controlled
+evidence.
 
 ## Start here
 
