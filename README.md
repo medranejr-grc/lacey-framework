@@ -115,7 +115,7 @@ flowchart TB
 judgment and revision. The execution path shown here is proposed, not implemented by this
 repository.*
 
-## Use the framework
+## Quick Start Guide: Use the Framework
 
 The constitutional artifacts can be used now. The signed identity, runtime enforcement, and evidence
 architecture is a proposal for practitioners to test, implement, or challenge.
