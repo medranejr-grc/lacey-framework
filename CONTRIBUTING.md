@@ -56,6 +56,8 @@ design from an implementation, and name what evidence would falsify the claim.
 For a flow-down test, identify where the constitutional artifact entered the system, how its mission
 and authorization were translated, which actions were mediated, what evidence was collected, and
 where meaning or control was lost. Do not submit private prompts, credentials, or protected logs.
+The copyable [`implementation and flow-down record`](templates/implementation-test-record.md) can be
+used to structure that evidence before opening a field-result issue.
 
 A contribution may be accepted, revised, deferred, or declined. Material disagreements should stay
 visible in the issue or pull-request record.

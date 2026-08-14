@@ -2,6 +2,10 @@ name: Report a field result
 description: Share a positive, neutral, or negative result from using a Lacey Framework artifact.
 title: "[Field result]: "
 body:
+  - type: markdown
+    attributes:
+      value: |
+        The optional [implementation and flow-down record](https://github.com/medranejr-grc/lacey-framework/blob/main/templates/implementation-test-record.md) can help you preserve the loading path, transitions, evidence, attribution, and limits before completing this form.
   - type: dropdown
     id: carrier
     attributes:
@@ -13,6 +17,13 @@ body:
         - Repository constitutional file
         - Signed manifest or runtime design
         - Partial or mixed adoption
+    validations:
+      required: true
+  - type: textarea
+    id: loading_path
+    attributes:
+      label: Implementation and loading path
+      description: Name the canonical constitution and version or digest, platform entry point, role document if used, task brief, and how you checked what actually loaded.
     validations:
       required: true
   - type: textarea
@@ -33,7 +44,7 @@ body:
     id: flow_down
     attributes:
       label: Execution and evidence path, when applicable
-      description: If this was a flow-down test, explain where the constitution entered the system, how it became identity or policy, which actions were mediated, what evidence was returned, and where meaning or control was lost.
+      description: If this was a flow-down test, describe each delegation transition, the authority and instruction passed, which actions were mediated, what evidence was returned, and where meaning or control was preserved or lost.
     validations:
       required: false
   - type: textarea

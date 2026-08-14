@@ -22,6 +22,11 @@ transcript and does not reveal platform system instructions.
 
 ## Use the runnable pack
 
+If you are adapting this pack to your own platform, first read the
+[`implementation guide`](../docs/implementation-guide.md). It distinguishes the canonical project
+constitution, platform entry point, role extension, and task brief, with copyable starting points
+for Codex, Claude Code, ChatGPT Projects, and custom runtimes.
+
 The companion [`multi-agent-release-team/`](multi-agent-release-team/) directory turns this record
 into a reproducible example:
 

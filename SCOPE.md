@@ -60,6 +60,17 @@ mediation, and evidence. Its current design is published in
 [`docs/execution-layer.md`](docs/execution-layer.md), along with the assumptions and gaps that keep
 it from being called an implementation or standard.
 
+### A carrier is not the constitution
+
+The authoritative user-authored artifact should remain vendor-neutral. A filename such as
+`AGENTS.md`, `CLAUDE.md`, or a platform's Project Instructions is an **entry point** that carries the
+approved constitution into that environment. A per-agent document is a **role extension**. A task
+brief is bounded direction for one run. Neither the entry point, role, nor task should silently
+become a competing source of mission.
+
+The practical hierarchy, platform-specific entry points, copyable adapters, and loading checks are
+in [`docs/implementation-guide.md`](docs/implementation-guide.md).
+
 > **A revision to the original model, stated openly.** The source architecture grouped Carriers 1–3
 > as "constitutional" and 4–5 as "technical." That split tracked *what had been built or deployed*
 > in early 2026, not what kind of thing each carrier is. Carrier 4 has since been deployed, and it is a text

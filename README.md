@@ -27,6 +27,11 @@ more capable agents place greater pressure on them. But a gate can determine whe
 allowed without determining whether it serves the mission. The Lacey Framework argues that serious
 agent governance needs both questions, asked in that order.
 
+**Want to implement it?** Start with the
+[`implementation guide`](docs/implementation-guide.md): create one vendor-neutral constitution,
+connect it through your platform's entry point, add role documents only when needed, and verify what
+actually loaded before testing behavior.
+
 ---
 
 ## The idea in one comparison
@@ -131,9 +136,12 @@ To create a constitutional artifact for an agent or repository:
    while violating its purpose or harming the people it is meant to serve.
 4. **Run the [`mission-integrity audit`](docs/mission-integrity.md).** Look for extraction,
    self-protection, or institutional advantage disguised as service.
-5. **Place the artifact through the carrier that fits your system.** Use project or system
-   instructions, a per-agent document, a shared team kernel, or a repository constitutional file.
-   [`SCOPE.md`](SCOPE.md) explains what each carrier can and cannot establish.
+5. **Install it through the entry point your platform actually loads.** Keep one vendor-neutral
+   project constitution, then connect it through `AGENTS.md`, `CLAUDE.md`, ChatGPT Project
+   Instructions, or your runtime's explicit loader. The
+   [`implementation guide`](docs/implementation-guide.md) gives the hierarchy, platform map,
+   copyable adapters, and loading checks. [`SCOPE.md`](SCOPE.md) explains what each carrier can and
+   cannot establish.
 6. **Keep your security controls and record what happens.** Constitutional context does not replace
    least privilege, runtime enforcement, testing, monitoring, or human review. Positive, neutral, and
    negative observations are all useful.
@@ -142,8 +150,10 @@ To create a constitutional artifact for an agent or repository:
 
 | Your goal | Start with | Continue with |
 |---|---|---|
-| **Use it** | [`templates/constitutional-document-skeleton.md`](templates/constitutional-document-skeleton.md) | [`templates/four-questions.md`](templates/four-questions.md), then [`docs/mission-integrity.md`](docs/mission-integrity.md) |
+| **Implement it** | [`docs/implementation-guide.md`](docs/implementation-guide.md) | Copy the [`constitutional document skeleton`](templates/constitutional-document-skeleton.md), then choose a [`platform entry point`](templates/platform-entry-points/) |
+| **Design the constitution** | [`templates/constitutional-document-skeleton.md`](templates/constitutional-document-skeleton.md) | [`templates/four-questions.md`](templates/four-questions.md), then [`docs/mission-integrity.md`](docs/mission-integrity.md) |
 | **Evaluate it** | [`SCOPE.md`](SCOPE.md) | [`PRINCIPLES.md`](PRINCIPLES.md), [`docs/evaluation.md`](docs/evaluation.md), and the worked [`examples/`](examples/) |
+| **Record an implementation or flow-down test** | [`templates/implementation-test-record.md`](templates/implementation-test-record.md) | Preserve the loading path, handoffs, evidence, human disposition, provenance, and limits; then use the field-result issue form |
 | **Test the execution proposal** | [`docs/execution-layer.md`](docs/execution-layer.md) | Report a flow-down test, trust-boundary failure, or missing interface through the issue forms |
 | **Challenge or extend it** | [`CONTRIBUTING.md`](CONTRIBUTING.md) | Open a claim challenge, field result, framework gap, or focused pull request |
 
@@ -159,7 +169,8 @@ evidence.
 
 | | |
 |---|---|
-| [`SCOPE.md`](SCOPE.md) | The layer map, the five carriers, and what this release covers. **Read first.** |
+| [`docs/implementation-guide.md`](docs/implementation-guide.md) | **How to turn the framework into files and load them in Codex, Claude Code, a ChatGPT Project, or a custom runtime.** |
+| [`SCOPE.md`](SCOPE.md) | The layer map, the five carriers, maturity boundaries, and what this release covers. |
 | [`PRINCIPLES.md`](PRINCIPLES.md) | The five principles, and the rules for representing them honestly. |
 | [`docs/manifesto.md`](docs/manifesto.md) | The full argument: secular case first, intellectual lineage, limits, and invitation to test it. |
 | [`docs/execution-layer.md`](docs/execution-layer.md) | The proposed signed manifest, runtime authorization, credential, delegation, and audit architecture, with its trust assumptions and open gaps. |

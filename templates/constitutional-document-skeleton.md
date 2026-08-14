@@ -194,13 +194,20 @@ This is the part to keep out of the resident kernel. It is reference material.
 
 ## Assembling it
 
+First save the approved, vendor-neutral source as `PROJECT_CONSTITUTION.md` or another clearly named
+canonical artifact. A platform-specific filename such as `AGENTS.md` or `CLAUDE.md` is an entry
+point, not a reason to create a different constitution. See the
+[`implementation guide`](../docs/implementation-guide.md) and copyable
+[`platform entry points`](platform-entry-points/).
+
 **Single agent:** Parts I–VI, merging II into I. Operating Card on top.
 
 **Multi-agent team:** one master document carrying the shared germinal idea, plus a per-agent
-document for each role. Part I is **byte-identical** across all of them; that is the coherence
-mechanism, not a convention. Both loading routes work: the whole pack (agents who know the team) or
-one role's section alongside the master (agents who know their role most deeply). Either way the
-master gets loaded.
+document for each role. Prefer loading one canonical shared kernel before each role file. If each
+role must be standalone, generate a byte-identical copy of Part I into every role and record its
+version or digest; do not maintain those copies independently. Both packaging routes can work: a
+whole pack for agents that must understand the team, or one role extension alongside the master for
+agents that need only their own role. Either way the authoritative master gets loaded.
 
 **Codebase:** the same structure as a constitutional file at the repository root. Technical
 standards do not disappear. They become *downstream* of the mission rather than the entirety of it.
