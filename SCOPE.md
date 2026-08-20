@@ -97,7 +97,9 @@ Read this before adopting anything here.
 - **It is not a prompt style guide.** The structure carries real architecture: identity, shared
   kernel, propagation, audit. Reducing it to formatting advice loses the part that does the work.
 - **It is not measured.** The carrier statuses above record deployment and informal observation,
-  not controlled evaluation. `docs/evaluation.md` provides a design outline, not a runnable study.
+  not controlled evaluation. `docs/evaluation.md` provides a design outline, and
+  `docs/controlled-delegation-continuity-test.md` develops one experimental candidate case. Neither
+  is evidence that a controlled study has been run.
 
 ## What it does do
 

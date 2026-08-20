@@ -8,6 +8,11 @@ Publishing an evaluation design outline is worth more than implying that evaluat
 identifies evidence that could change the picture while remaining explicit that a reproducible task
 suite, scoring rubric, sampling plan, run count, and analysis procedure have not been built.
 
+A separate [`controlled delegation continuity test`](controlled-delegation-continuity-test.md)
+turns one pressure case into an experimental candidate protocol with transition records, operator
+constraints, evidence fields, and a preliminary rubric. It has not been run and is not a substitute
+for the controlled, repeated study outlined below.
+
 ---
 
 ## What is actually claimed
@@ -152,7 +157,10 @@ with this framework, is the honest version.
 In rough order of value per unit effort:
 
 1. **A reproducible implementation of the design above**, published with tasks, rubric, run records,
-   and analysis criteria.
+   and analysis criteria. The candidate
+   [`controlled delegation continuity test`](controlled-delegation-continuity-test.md) can be used
+   to develop one pressure case, but still requires a frozen artifact, controls, repetition, and an
+   analysis plan.
 2. **An adversarial contribution:** a documented case where a constitutional instruction produced
    *worse* behavior than a rule list. More valuable here than confirmation.
 3. **Systematic observation of existing deployments:** behavior has been watched informally.

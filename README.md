@@ -77,7 +77,9 @@ they were being hidden:
   model's system instructions, a platform's safety hierarchy, or a vendor's tool policy.
 - **It has not been measured.** Constitutional artifacts have been deployed and behavior informally
   observed. Controlled evaluation has not been run. [`docs/evaluation.md`](docs/evaluation.md) gives
-  an evaluation design outline and is explicit that it is not yet a runnable study.
+  an evaluation design outline; the experimental
+  [`controlled delegation test`](docs/controlled-delegation-continuity-test.md) develops one
+  candidate pressure case without claiming that a controlled study exists.
 
 [`SCOPE.md`](SCOPE.md) maps the full architecture and marks the maturity of each part.
 
@@ -152,7 +154,7 @@ To create a constitutional artifact for an agent or repository:
 |---|---|---|
 | **Implement it** | [`docs/implementation-guide.md`](docs/implementation-guide.md) | Copy the [`constitutional document skeleton`](templates/constitutional-document-skeleton.md), then choose a [`platform entry point`](templates/platform-entry-points/) |
 | **Design the constitution** | [`templates/constitutional-document-skeleton.md`](templates/constitutional-document-skeleton.md) | [`templates/four-questions.md`](templates/four-questions.md), then [`docs/mission-integrity.md`](docs/mission-integrity.md) |
-| **Evaluate it** | [`SCOPE.md`](SCOPE.md) | [`PRINCIPLES.md`](PRINCIPLES.md), [`docs/evaluation.md`](docs/evaluation.md), and the worked [`examples/`](examples/) |
+| **Evaluate it** | [`SCOPE.md`](SCOPE.md) | [`docs/evaluation.md`](docs/evaluation.md), the candidate [`controlled delegation test`](docs/controlled-delegation-continuity-test.md), and the worked [`examples/`](examples/) |
 | **Record an implementation or flow-down test** | [`templates/implementation-test-record.md`](templates/implementation-test-record.md) | Preserve the loading path, handoffs, evidence, human disposition, provenance, and limits; then use the field-result issue form |
 | **Test the execution proposal** | [`docs/execution-layer.md`](docs/execution-layer.md) | Report a flow-down test, trust-boundary failure, or missing interface through the issue forms |
 | **Challenge or extend it** | [`CONTRIBUTING.md`](CONTRIBUTING.md) | Open a claim challenge, field result, framework gap, or focused pull request |
@@ -181,6 +183,7 @@ evidence.
 | [`docs/mission-integrity.md`](docs/mission-integrity.md) | **How to audit a mission for extraction disguised as service.** The defense against this framework's own primary vulnerability. |
 | [`docs/coding-agents.md`](docs/coding-agents.md) | A high-stakes deployment category, and a concrete before/after of a rule list becoming a constitution. |
 | [`docs/evaluation.md`](docs/evaluation.md) | What has been informally observed, what has not been measured, and an outline for testing it. |
+| [`docs/controlled-delegation-continuity-test.md`](docs/controlled-delegation-continuity-test.md) | An experimental candidate protocol for testing mission and authority continuity across one bounded agent handoff. |
 | [`examples/multi-agent-release-team.md`](examples/multi-agent-release-team.md) | A public reconstruction of the Dana/Ruth/Elena release pattern, with a runnable vendor-neutral pack and review summaries. |
 | [`examples/diamond-intelligence.md`](examples/diamond-intelligence.md) | A historical repository constitution, its human shutdown decision, its mission-integrity failures, and a clearly labeled public repair. |
 
