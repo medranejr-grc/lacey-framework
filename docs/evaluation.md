@@ -75,13 +75,16 @@ above, and presenting it as such would be exactly the overreach this document ex
 ## Evaluation design outline
 
 This is not yet a reproducible protocol. A runnable study would need fixed tasks and sources, a
-predefined rubric, repeated runs, model and tool controls, blinded adjudication, and an analysis plan.
-It should also include a concise-mission control and component ablations for the Watchman and Four
-Questions so the contribution of the six-part pattern can be distinguished from added context alone.
+predefined rubric, repeated runs, model, routing, tool, and harness-policy controls, blinded
+adjudication, and an analysis plan. It should also include a concise-mission control and component
+ablations for the Watchman and Four Questions so the contribution of the six-part pattern can be
+distinguished from added context alone.
 
 ### Design
 
-Three conditions, same model, same tasks, same tools.
+Three conditions, same requested and actual model, same reasoning or inference profile, same tasks,
+same tools, and same enforced harness policy. Disable adaptive routing when possible; otherwise
+constrain and record every selected route.
 
 - **A: No instruction.** Task only. Baseline.
 - **B: Cage.** An explicit rule list covering the same ground the constitutional document covers,
@@ -145,6 +148,10 @@ by someone who has not read the constitutional document, or drawn from real logs
 constitutional language works by recruiting learned representations of human moral reasoning,
 implies results will vary across model families and training generations. A single-model result
 should not be generalized.
+
+**Adaptive routing.** A provider or local harness may silently change model class or inference
+effort. If the actual route cannot be fixed or observed, an apparent constitutional effect may be a
+model-selection effect instead.
 
 **Condition B is a judgment call.** "An equivalent rule list" is written by someone who believes
 rule lists are the weaker approach. A deliberately strong B, ideally written by someone who disagrees

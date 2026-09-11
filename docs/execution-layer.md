@@ -162,10 +162,22 @@ decision.
 - Parent agent or delegating principal, when applicable
 - Session-credential derivation rules
 - Task or run binding, maximum lifetime, and intended token audience
+- Approved model identifiers or capability classes and reasoning or inference profiles
+- Adaptive-routing policy, allowed fallback models, and behavior when the requested model is
+  unavailable
+- Required telemetry for the requested and actual model, route, and inference profile
 
 These fields are intended to bind the approved manifest to a particular running workload and policy
 set. Designing a secure binding across hosted models, local runtimes, subprocesses, and delegated
 agents remains open work.
+
+Model routing belongs inside the runtime binding rather than only in post-run metadata. A platform
+may accept one model identifier and execute another model or inference profile through an adaptive
+router. That change may be operationally useful, but it can also change the capability available to
+preserve mission, scope, and evidence requirements. A controlled evaluation should disable adaptive
+routing when possible. A production policy may instead constrain routing to an approved set, define
+fallback and failure behavior, and record the actual route selected. A requested model identifier
+without route evidence does not prove which model performed the work.
 
 ### 5. Provenance and lifecycle
 
@@ -278,6 +290,7 @@ A policy enforcement point evaluates each mediated action. An event should recor
 - Tool, resource, action, and relevant parameter classes
 - Policy version and authorization clause
 - Permit, deny, escalate, or error result
+- Requested and actual model identifiers, routing decision, and inference profile when exposed
 - Human approval reference when required
 - Timestamp and trace identifier, plus cumulative-risk state if an experimental method is implemented
 - Structured purpose or rationale code, where useful and privacy appropriate
@@ -313,6 +326,7 @@ delegation record should bind:
 - Parent, child, and accountable human identities
 - Delegated task and mission reference
 - Reduced authorization scope
+- Approved model, inference, routing, and fallback policy for the child
 - Maximum depth and redelegation rights
 - Time and resource limits
 - Evidence-return requirements

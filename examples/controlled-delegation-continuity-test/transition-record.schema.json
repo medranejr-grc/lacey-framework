@@ -1,0 +1,170 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/medranejr-grc/lacey-framework/examples/controlled-delegation-continuity-test/transition-record.schema.json",
+  "title": "Lacey controlled delegation transition record",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "example_only",
+    "record_type",
+    "run_id",
+    "transition_id",
+    "record_status",
+    "parent",
+    "child",
+    "accountable_human",
+    "mission",
+    "role_extension",
+    "task",
+    "approved_sources",
+    "permissions",
+    "delegation",
+    "limits",
+    "evidence_return",
+    "escalation_triggers",
+    "model_execution",
+    "runtime_controls",
+    "pressure_injection",
+    "created_at"
+  ],
+  "properties": {
+    "schema_version": { "const": "0.1" },
+    "example_only": { "type": "boolean" },
+    "record_type": { "const": "delegation_transition" },
+    "run_id": { "type": "string", "minLength": 1 },
+    "transition_id": { "type": "string", "minLength": 1 },
+    "record_status": { "enum": ["planned", "frozen", "observed"] },
+    "parent": { "$ref": "#/$defs/principal" },
+    "child": { "$ref": "#/$defs/principal" },
+    "accountable_human": { "type": "string", "minLength": 1 },
+    "mission": { "$ref": "#/$defs/artifact" },
+    "role_extension": { "$ref": "#/$defs/artifact" },
+    "task": { "type": "string", "minLength": 1 },
+    "approved_sources": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/artifact" }
+    },
+    "permissions": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["allowed_tools", "allowed_actions", "prohibited_actions"],
+      "properties": {
+        "allowed_tools": { "$ref": "#/$defs/stringArray" },
+        "allowed_actions": { "$ref": "#/$defs/stringArray" },
+        "prohibited_actions": { "$ref": "#/$defs/stringArray" }
+      }
+    },
+    "delegation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["allowed", "maximum_depth", "redelegation_constraints"],
+      "properties": {
+        "allowed": { "type": "boolean" },
+        "maximum_depth": { "type": "integer", "minimum": 0 },
+        "redelegation_constraints": { "type": "string", "minLength": 1 }
+      }
+    },
+    "limits": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["duration_minutes", "token_budget"],
+      "properties": {
+        "duration_minutes": { "type": "integer", "minimum": 1 },
+        "token_budget": { "type": "integer", "minimum": 1 }
+      }
+    },
+    "evidence_return": { "$ref": "#/$defs/nonEmptyStringArray" },
+    "escalation_triggers": { "$ref": "#/$defs/nonEmptyStringArray" },
+    "model_execution": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "provider",
+        "requested_model_id",
+        "reasoning_effort",
+        "adaptive_routing_allowed",
+        "allowed_fallback_model_ids",
+        "on_unavailable",
+        "actual_model_id"
+      ],
+      "properties": {
+        "provider": { "type": "string", "minLength": 1 },
+        "requested_model_id": { "type": "string", "minLength": 1 },
+        "reasoning_effort": { "type": "string", "minLength": 1 },
+        "adaptive_routing_allowed": { "type": "boolean" },
+        "allowed_fallback_model_ids": { "$ref": "#/$defs/stringArray" },
+        "on_unavailable": { "enum": ["fail_run", "pause_for_approval", "use_allowed_fallback"] },
+        "actual_model_id": { "type": ["string", "null"] }
+      }
+    },
+    "runtime_controls": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "sandbox_root",
+        "network_default",
+        "allowed_network_destinations",
+        "credential_mode",
+        "policy_bundle_digest",
+        "audit_destination"
+      ],
+      "properties": {
+        "sandbox_root": { "type": "string", "minLength": 1 },
+        "network_default": { "enum": ["deny", "allow"] },
+        "allowed_network_destinations": { "$ref": "#/$defs/stringArray" },
+        "credential_mode": { "type": "string", "minLength": 1 },
+        "policy_bundle_digest": { "$ref": "#/$defs/sha256" },
+        "audit_destination": { "type": "string", "minLength": 1 }
+      }
+    },
+    "pressure_injection": {
+      "type": ["object", "null"],
+      "additionalProperties": false,
+      "required": ["pressure_id", "mechanism", "operator_authored"],
+      "properties": {
+        "pressure_id": { "type": "string", "minLength": 1 },
+        "mechanism": { "type": "string", "minLength": 1 },
+        "operator_authored": { "type": "boolean" }
+      }
+    },
+    "created_at": { "type": "string", "format": "date-time" }
+  },
+  "$defs": {
+    "principal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["identity", "session_id"],
+      "properties": {
+        "identity": { "type": "string", "minLength": 1 },
+        "session_id": { "type": "string", "minLength": 1 }
+      }
+    },
+    "artifact": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": ["path", "repository_commit", "sha256"],
+      "properties": {
+        "path": { "type": "string", "minLength": 1 },
+        "repository_commit": { "type": "string", "minLength": 1 },
+        "sha256": { "$ref": "#/$defs/sha256" }
+      }
+    },
+    "sha256": {
+      "type": "string",
+      "pattern": "^[a-f0-9]{64}$"
+    },
+    "stringArray": {
+      "type": "array",
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    },
+    "nonEmptyStringArray": {
+      "type": "array",
+      "minItems": 1,
+      "items": { "type": "string", "minLength": 1 },
+      "uniqueItems": true
+    }
+  }
+}
+

@@ -2,7 +2,8 @@
 
 This pack is platform-neutral. It can be implemented with separate agent sessions, subprocesses, or
 repeated isolated review passes. Role separation is the variable the proposed comparison would
-examine; model and platform remain recorded execution variables.
+examine; model, reasoning effort, routing, harness policy, and platform remain controlled or
+recorded execution variables.
 
 ## Files
 
@@ -33,8 +34,22 @@ narrow but cannot override the shared human-authority boundary.
 4. Keep initial review runs separate: do not show one reviewer's findings to another before both
    initial reviews are complete. Separate runs are not institutionally independent and may share
    model or platform blind spots.
-5. Record the model, version if exposed, and reasoning setting used for each run. These are execution
-   variables, not constitutional content.
+5. Freeze the requested model, version if exposed, reasoning setting, adaptive-routing policy,
+   allowed fallbacks, and failure behavior for each run. Record the actual model and route selected
+   at every role transition when the platform exposes them. An unexplained route change is a
+   confounder, not an implementation detail.
+6. Run each role with an isolated, least-privilege identity. Restrict files, tools, network paths,
+   and credentials to the test scope, and record the enforced policy or configuration version.
+
+## Runtime boundary
+
+This pack supplies constitutional context and role separation. It does not create a sandbox,
+enforce an allowlist, remove ambient credentials, or configure IAM. The operator must provide those
+controls at the harness, operating-system, container, or cloud-resource layer.
+
+Containment should prevent live publication, production modification, credential use, or unapproved
+network access without pre-answering the review question. If a harness blocks a test pressure before
+the agent receives it, record that as a harness result rather than evidence of mission continuity.
 
 ## Execution
 
@@ -64,9 +79,10 @@ Return only material findings using the finding record. Do not treat this as leg
 To test the architecture rather than merely use it, run the same release task under at least two
 conditions: this separated-role pack and one general-purpose agent performing sequential review
 passes. Hold the task, sources, tools, model settings, and context budget constant; use repeated runs
-and a predefined rubric scored without showing raters which condition produced each output. Possible
-measures include unsupported claims found, valid findings accepted, reviewer overlap, false
-positives, time, and token cost.
+and a predefined rubric scored without showing raters which condition produced each output. Disable
+adaptive routing when possible; otherwise hold the allowed route set constant and record the actual
+model selected for every pass. Possible measures include unsupported claims found, valid findings
+accepted, reviewer overlap, false positives, time, and token cost.
 
 The historical private deployment documents related role-separated review passes. This public pack
 has not yet been run, and no comparison has been performed.

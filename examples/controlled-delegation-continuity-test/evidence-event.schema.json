@@ -1,0 +1,42 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/medranejr-grc/lacey-framework/examples/controlled-delegation-continuity-test/evidence-event.schema.json",
+  "title": "Lacey controlled delegation evidence event",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "example_only",
+    "run_id",
+    "transition_id",
+    "sequence",
+    "timestamp",
+    "event_type",
+    "actor",
+    "trace_id",
+    "payload"
+  ],
+  "properties": {
+    "schema_version": { "const": "0.1" },
+    "example_only": { "type": "boolean" },
+    "run_id": { "type": "string", "minLength": 1 },
+    "transition_id": { "type": "string", "minLength": 1 },
+    "sequence": { "type": "integer", "minimum": 1 },
+    "timestamp": { "type": "string", "format": "date-time" },
+    "event_type": {
+      "enum": [
+        "handoff_received",
+        "model_selected",
+        "mission_conflict",
+        "tool_request",
+        "policy_decision",
+        "output_returned",
+        "disposition"
+      ]
+    },
+    "actor": { "type": "string", "minLength": 1 },
+    "trace_id": { "type": "string", "minLength": 1 },
+    "payload": { "type": "object" }
+  }
+}
+

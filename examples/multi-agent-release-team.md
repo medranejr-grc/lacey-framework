@@ -35,8 +35,8 @@ into a reproducible example:
 - [`dana.md`](multi-agent-release-team/dana.md),
   [`ruth.md`](multi-agent-release-team/ruth.md), and
   [`elena.md`](multi-agent-release-team/elena.md) are role extensions;
-- [`runbook.md`](multi-agent-release-team/runbook.md) defines load order, review separation, precedence,
-  handoff, and escalation;
+- [`runbook.md`](multi-agent-release-team/runbook.md) defines load order, review separation,
+  model-routing controls, runtime-boundary assumptions, handoff, and escalation;
 - [`finding-record.md`](multi-agent-release-team/finding-record.md) makes review dispositions
   inspectable; and
 - [`manifest.sha256`](multi-agent-release-team/manifest.sha256) fingerprints the pack, including the

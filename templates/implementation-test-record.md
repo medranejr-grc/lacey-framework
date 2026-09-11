@@ -12,11 +12,33 @@ data before sharing any version publicly.
 - **Date or run identifier:**
 - **System being tested:**
 - **Platform and runtime:**
-- **Model and version, if exposed:**
+- **Requested model, provider, and version or snapshot, if exposed:**
+- **Required reasoning effort or inference profile:**
+- **Adaptive-routing policy and allowed fallbacks:**
+- **Behavior if the requested model is unavailable:**
+- **Actual model and route used at each step, if exposed:**
+- **Context-compression or tool-routing behavior, if exposed:**
 - **Tools and data available:**
 - **Relevant security and approval controls:**
 
-## 2. Constitutional artifacts
+## 2. Harness and system boundary
+
+- **Isolated working directory or sandbox:**
+- **Workload or process identity:**
+- **Allowed tools, actions, paths, and network destinations:**
+- **Mechanically prohibited actions:**
+- **IAM or resource-policy scope:**
+- **Credential mode and confirmation that no ambient credentials were available:**
+- **Harness policy or configuration version and digest:**
+- **Audit destination and required event types:**
+- **Retention and cleanup rule:**
+- **Controls verified before execution by:**
+
+State whether any technical control prevented the agent from encountering the semantic conflict. If
+so, record the result as a harness outcome rather than evidence that constitutional context changed
+the agent's behavior.
+
+## 3. Constitutional artifacts
 
 - **Canonical constitution filename:**
 - **Constitution version, approval date, or digest:**
@@ -25,7 +47,7 @@ data before sharing any version publicly.
 - **Task brief identifier:**
 - **How each artifact was loaded:**
 
-## 3. Loading check
+## 4. Loading check
 
 Before the test task, ask the agent to identify the following without supplying the answers again in
 the question.
@@ -41,7 +63,7 @@ the question.
 A correct answer shows that the information was available in that moment. It does not establish
 behavioral effect.
 
-## 4. Test case
+## 5. Test case
 
 - **Question or hypothesis:**
 - **Ambiguity, pressure, or failure mode introduced:**
@@ -49,8 +71,9 @@ behavioral effect.
 - **Predefined failure criterion:**
 - **Baseline or comparison condition, if any:**
 - **Variables held constant:**
+- **Model or routing variable intentionally changed, if any:**
 
-## 5. Delegation transitions
+## 6. Delegation transitions
 
 Add one row for every handoff. Preserve the exact downstream instruction privately when it cannot be
 shared publicly.
@@ -60,15 +83,17 @@ shared publicly.
 | 0 | Human owner | Initial agent | | | | |
 | 1 | | | | | | |
 
-## 6. Output and action evidence
+## 7. Output and action evidence
 
 - **Output or attempted action:**
 - **Actions allowed, denied, or escalated:**
+- **Requested and actual model, route, and reasoning effort per transition:**
 - **Tool or policy records retained:**
+- **Policy or configuration digest matched to enforcement evidence:**
 - **Missing or potentially incomplete evidence:**
 - **Observed mission continuity or drift:**
 
-## 7. Human review and disposition
+## 8. Human review and disposition
 
 - **Reviewer:**
 - **Review criterion:**
@@ -77,17 +102,19 @@ shared publicly.
 - **Repair made, if any:**
 - **What would change the conclusion:**
 
-## 8. Provenance and attribution
+## 9. Provenance and attribution
 
 - **Pre-existing Lacey components used:**
 - **Pre-existing external components used:**
 - **Components developed during this test:**
 - **Attribution or licensing notes:**
 
-## 9. Limits
+## 10. Limits
 
 - **What this observation supports:**
 - **What it does not support:**
 - **Confounders or uncontrolled variables:**
+- **Unobserved routing, fallback, or model changes:**
+- **Unverified sandbox, IAM, credential, network, or tool boundaries:**
 - **Privacy-driven omissions:**
 - **Suggested next test:**
