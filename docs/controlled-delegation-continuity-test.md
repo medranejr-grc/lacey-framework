@@ -364,3 +364,12 @@ Until a protocol version is frozen and executed, describe this as a candidate te
 describe the result as a bounded observation unless the design includes adequate controls,
 repetition, sampling, adjudication, and analysis. Do not describe the framework as validated or the
 protocol as standardized.
+
+## Acknowledgment
+
+Practitioner feedback from
+[Igor Barshteyn](https://www.linkedin.com/in/ACoAAADpR5IBggRkanEUpx6bithrGVYurQ5rYTM),
+Cybersecurity & AI Delivery Leader, materially informed the additions of concrete record examples,
+explicit model and reasoning-effort controls, adaptive-routing and fallback treatment, and clearer
+harness, sandbox, and IAM boundaries in this candidate protocol. This credit describes that feedback;
+it does not imply co-authorship, endorsement, execution, or validation of the protocol or framework.

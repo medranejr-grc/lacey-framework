@@ -230,6 +230,14 @@ His character governed where no rule was present. The framework asks whether a c
 purpose can play an analogous, testable role for agents. Rules constrain action; mission interprets
 purpose. Responsible systems need both.
 
+## Acknowledgments
+
+[Igor Barshteyn](https://www.linkedin.com/in/ACoAAADpR5IBggRkanEUpx6bithrGVYurQ5rYTM),
+Cybersecurity & AI Delivery Leader, provided practitioner feedback that materially strengthened the
+[`Controlled Delegation Continuity Test`](docs/controlled-delegation-continuity-test.md), especially
+its record examples, model-routing controls, and harness, sandbox, and IAM boundaries. The protocol
+contains the full attribution and claims boundary.
+
 ## License
 
 Split by directory, because this repository contains two different kinds of thing. See
